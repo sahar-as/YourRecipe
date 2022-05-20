@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="ir.saharapps.yourreciepe.ui.home.HomeFragment"
+        android:name="ir.saharapps.yourreciepe.view.fragment.AllDishesFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_all_dishes" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="ir.saharapps.yourreciepe.ui.dashboard.DashboardFragment"
+        android:name="ir.saharapps.yourreciepe.view.fragment.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="ir.saharapps.yourreciepe.ui.notifications.NotificationsFragment"
+        android:name="ir.saharapps.yourreciepe.view.fragment.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

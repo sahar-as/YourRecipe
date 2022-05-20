@@ -1,4 +1,4 @@
-package ir.saharapps.yourreciepe
+package ir.saharapps.yourreciepe.view.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,7 @@ import android.os.Looper
 import android.view.animation.Animation
 
 import android.view.animation.AnimationUtils
+import ir.saharapps.yourreciepe.R
 import ir.saharapps.yourreciepe.databinding.ActivitySplashBinding
 
 class SplashActivity : AppCompatActivity() {

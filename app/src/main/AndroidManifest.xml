@@ -10,12 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.YourRecipe">
         <activity
-            android:name="ir.saharapps.yourreciepe.MainActivity"
+            android:name=".view.activity.AddUpdateDishActivity"
+            android:exported="false"
+            android:label="Add Dish"
+            android:theme="@style/AppThemeWithStatusBar"/>
+        <activity
+            android:name=".view.activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name="ir.saharapps.yourreciepe.SplashActivity"
+            android:name=".view.activity.SplashActivity"
             android:exported="true"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppThemeNoStatusBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
