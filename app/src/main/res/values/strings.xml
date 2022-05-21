@@ -4,5 +4,14 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="application_name">Your Recipe</string>
+    <string name="hint">Hint</string>
+    <string name="category">Category</string>
+    <string name="type">Type</string>
+    <string name="title">Title</string>
+    <string name="ingredient">Ingredient</string>
+    <string name="cooking_time_in_minutes">Cooking time in minutes</string>
+    <string name="direction_to_cook">Direction to cook</string>
     <string name="add_dish">Add Dish</string>
+    <string name="dish_image">Dish Image</string>
+    <string name="add_dish_image">Add Dish Image</string>
 </resources>
