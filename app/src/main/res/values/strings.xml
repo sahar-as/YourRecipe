@@ -14,4 +14,7 @@
     <string name="add_dish">Add Dish</string>
     <string name="dish_image">Dish Image</string>
     <string name="add_dish_image">Add Dish Image</string>
+    <string name="select_image">Select Image</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
 </resources>

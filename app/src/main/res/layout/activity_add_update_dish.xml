@@ -50,7 +50,9 @@
             android:layout_gravity="end|bottom"
             android:src="@drawable/ic_add_image"
             tools:ignore="ImageContrastCheck"
-            android:contentDescription="@string/add_dish_image" />
+            android:contentDescription="@string/add_dish_image"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"/>
     </FrameLayout>
     <ScrollView
         android:layout_width="match_parent"
