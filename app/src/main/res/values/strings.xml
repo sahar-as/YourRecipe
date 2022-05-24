@@ -18,4 +18,5 @@
     <string name="gallery">Gallery</string>
     <string name="camera">Camera</string>
     <string name="noDishesAdded">No dishes added yet</string>
+    <string name="dishesImage">dishes image</string>
 </resources>
