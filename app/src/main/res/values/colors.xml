@@ -17,4 +17,6 @@
     <color name="secondaryDarkColor">#29434e</color>
     <color name="primaryTextColor">#000000</color>
     <color name="secondaryTextColor">#ffffff</color>
+
+    <color name="deviderColor">#e0e0e0</color>
 </resources>
