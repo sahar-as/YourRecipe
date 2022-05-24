@@ -17,4 +17,5 @@
     <string name="select_image">Select Image</string>
     <string name="gallery">Gallery</string>
     <string name="camera">Camera</string>
+    <string name="noDishesAdded">No dishes added yet</string>
 </resources>

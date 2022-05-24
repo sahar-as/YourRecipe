@@ -2,16 +2,25 @@ package ir.saharapps.yourreciepe.view.fragment
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import ir.saharapps.yourreciepe.Application.FavDishApplication
 import ir.saharapps.yourreciepe.R
 import ir.saharapps.yourreciepe.databinding.FragmentAllDishesBinding
 import ir.saharapps.yourreciepe.view.activity.AddUpdateDishActivity
+import ir.saharapps.yourreciepe.viewmodel.FavDishViewModel
+import ir.saharapps.yourreciepe.viewmodel.FavDishViewModelFactory
 import ir.saharapps.yourreciepe.viewmodel.HomeViewModel
 
 class AllDishesFragment : Fragment() {
+
+    private val mFavDishViewModel: FavDishViewModel by viewModels {
+        FavDishViewModelFactory((requireActivity().application as FavDishApplication).repository )
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +54,19 @@ class AllDishesFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        mFavDishViewModel.allDishesList.observe(viewLifecycleOwner){
+            dishes ->
+            dishes.let {
+                for(item in it){
+                    Log.d("TAG", "onViewCreated: 111111111111 ${item.id} :: ${item.title}")
+                }
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

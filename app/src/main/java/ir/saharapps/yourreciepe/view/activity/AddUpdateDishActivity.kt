@@ -23,6 +23,7 @@ import android.text.TextUtils
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
 import androidx.annotation.MainThread
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.toBitmap
@@ -40,12 +41,16 @@ import com.karumi.dexter.listener.PermissionGrantedResponse
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.karumi.dexter.listener.single.PermissionListener
+import ir.saharapps.yourreciepe.Application.FavDishApplication
 import ir.saharapps.yourreciepe.R
 import ir.saharapps.yourreciepe.databinding.ActivityAddUpdateDishBinding
 import ir.saharapps.yourreciepe.databinding.DialogChoosingImageBinding
 import ir.saharapps.yourreciepe.databinding.DialogCustomListAddactivityBinding
+import ir.saharapps.yourreciepe.model.entities.FavDish
 import ir.saharapps.yourreciepe.utils.Constants
 import ir.saharapps.yourreciepe.view.adapter.CustomListAdapter
+import ir.saharapps.yourreciepe.viewmodel.FavDishViewModel
+import ir.saharapps.yourreciepe.viewmodel.FavDishViewModelFactory
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -59,6 +64,10 @@ class AddUpdateDishActivity : AppCompatActivity(), View.OnClickListener{
 
     private var mImagePath: String =""
     private lateinit var mCustomDialog: Dialog
+
+    private val mFavDishViewModel: FavDishViewModel by viewModels{
+        FavDishViewModelFactory((application as FavDishApplication).repository)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -134,7 +143,16 @@ class AddUpdateDishActivity : AppCompatActivity(), View.OnClickListener{
                         }
 
                         else ->{
-                            Toast.makeText(this,"every thing is fin", Toast.LENGTH_SHORT).show()
+                            val favDishDetails: FavDish = FavDish(
+                                mImagePath, Constants.DISH_IMAGE_SOURCE_LOCAL,
+                                title, type, category, ingredient, cookingTime,
+                                cookingDirection, false
+                            )
+                            mFavDishViewModel.insert(favDishDetails)
+                            Toast.makeText(this,
+                                "You Successfully added your favorite dish details.", Toast.LENGTH_SHORT)
+                                .show()
+                            finish()
                         }
 
                     }
@@ -143,7 +161,6 @@ class AddUpdateDishActivity : AppCompatActivity(), View.OnClickListener{
             }
         }
     }
-
 
 
     private fun selectImageOfDish(){
