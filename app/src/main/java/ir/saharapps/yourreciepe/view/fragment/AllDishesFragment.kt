@@ -4,19 +4,26 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.*
+import android.widget.GridLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import ir.saharapps.yourreciepe.Application.FavDishApplication
 import ir.saharapps.yourreciepe.R
 import ir.saharapps.yourreciepe.databinding.FragmentAllDishesBinding
+import ir.saharapps.yourreciepe.model.entities.FavDish
 import ir.saharapps.yourreciepe.view.activity.AddUpdateDishActivity
+import ir.saharapps.yourreciepe.view.activity.MainActivity
+import ir.saharapps.yourreciepe.view.adapter.FavDishAdapter
 import ir.saharapps.yourreciepe.viewmodel.FavDishViewModel
 import ir.saharapps.yourreciepe.viewmodel.FavDishViewModelFactory
 import ir.saharapps.yourreciepe.viewmodel.HomeViewModel
 
 class AllDishesFragment : Fragment() {
+    private lateinit var mBinding: FragmentAllDishesBinding
 
     private val mFavDishViewModel: FavDishViewModel by viewModels {
         FavDishViewModelFactory((requireActivity().application as FavDishApplication).repository )
@@ -38,17 +45,8 @@ class AllDishesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
-        _binding = FragmentAllDishesBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+        mBinding = FragmentAllDishesBinding.inflate(inflater,container,false)
+        return mBinding.root
     }
 
     override fun onDestroyView() {
@@ -58,12 +56,21 @@ class AllDishesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        mBinding.rvFragmentAllDishesList.layoutManager = GridLayoutManager(requireActivity(),2)
+        val adapter = FavDishAdapter(this@AllDishesFragment)
+        mBinding.rvFragmentAllDishesList.adapter = adapter
 
         mFavDishViewModel.allDishesList.observe(viewLifecycleOwner){
             dishes ->
             dishes.let {
-                for(item in it){
-                    Log.d("TAG", "onViewCreated: 111111111111 ${item.id} :: ${item.title}")
+                if(it.isNotEmpty()){
+                    mBinding.rvFragmentAllDishesList.visibility = View.VISIBLE
+                    mBinding.txtFragmentAllDishesNoDishes.visibility = View.GONE
+
+                    adapter.dishesList(it)
+                }else{
+                    mBinding.rvFragmentAllDishesList.visibility = View.GONE
+                    mBinding.txtFragmentAllDishesNoDishes.visibility = View.VISIBLE
                 }
             }
         }
@@ -82,5 +89,20 @@ class AllDishesFragment : Fragment() {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    fun dishDetails(favDish: FavDish){
+        findNavController().navigate(AllDishesFragmentDirections.actionNavigationAllDishesToDishDetailsFragment(favDish))
+        if(requireActivity() is MainActivity){
+            (activity as MainActivity?)?.hideBottomNavigationView()
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        if(requireActivity() is MainActivity){
+            (activity as MainActivity?)?.showBottomNavigationView()
+        }
     }
 }

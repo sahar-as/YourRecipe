@@ -121,25 +121,25 @@ class AddUpdateDishActivity : AppCompatActivity(), View.OnClickListener{
 
                     when{
                         TextUtils.isEmpty(mImagePath) ->{
-                            Toast.makeText(this,"Select Dish Image", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@AddUpdateDishActivity,"Select Dish Image", Toast.LENGTH_SHORT).show()
                         }
                         TextUtils.isEmpty(title) ->{
-                            Toast.makeText(this,"Enter Dish Title", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@AddUpdateDishActivity,"Enter Dish Title", Toast.LENGTH_SHORT).show()
                         }
                         TextUtils.isEmpty(type) ->{
-                            Toast.makeText(this,"Select Dish Type", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@AddUpdateDishActivity,"Select Dish Type", Toast.LENGTH_SHORT).show()
                         }
                         TextUtils.isEmpty(category) ->{
-                            Toast.makeText(this,"Select Dish Category", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@AddUpdateDishActivity,"Select Dish Category", Toast.LENGTH_SHORT).show()
                         }
                         TextUtils.isEmpty(ingredient) ->{
-                            Toast.makeText(this,"Enter Dish Ingredient", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@AddUpdateDishActivity,"Enter Dish Ingredient", Toast.LENGTH_SHORT).show()
                         }
                         TextUtils.isEmpty(cookingTime) ->{
-                            Toast.makeText(this,"Select Cooking Time", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@AddUpdateDishActivity,"Select Cooking Time", Toast.LENGTH_SHORT).show()
                         }
                         TextUtils.isEmpty(cookingDirection) ->{
-                            Toast.makeText(this,"Enter Cooking Direction", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@AddUpdateDishActivity,"Enter Cooking Direction", Toast.LENGTH_SHORT).show()
                         }
 
                         else ->{
@@ -149,7 +149,7 @@ class AddUpdateDishActivity : AppCompatActivity(), View.OnClickListener{
                                 cookingDirection, false
                             )
                             mFavDishViewModel.insert(favDishDetails)
-                            Toast.makeText(this,
+                            Toast.makeText(this@AddUpdateDishActivity,
                                 "You Successfully added your favorite dish details.", Toast.LENGTH_SHORT)
                                 .show()
                             finish()

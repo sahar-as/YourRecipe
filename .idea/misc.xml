@@ -6,6 +6,7 @@
         <entry key="..\:/0-pojects/Android/YourReciepe/app/src/main/res/drawable/ic_add_image.xml" value="0.175" />
         <entry key="..\:/0-pojects/Android/YourReciepe/app/src/main/res/drawable/ic_camera.xml" value="0.175" />
         <entry key="..\:/0-pojects/Android/YourReciepe/app/src/main/res/drawable/ic_image.xml" value="0.175" />
+        <entry key="..\:/0-pojects/Android/YourReciepe/app/src/main/res/drawable/ic_random_dish.xml" value="0.175" />
         <entry key="..\:/0-pojects/Android/YourReciepe/app/src/main/res/layout-v23/dialog_choosing_image.xml" value="0.25416666666666665" />
         <entry key="..\:/0-pojects/Android/YourReciepe/app/src/main/res/layout/activity_add_update_dish.xml" value="0.25" />
         <entry key="..\:/0-pojects/Android/YourReciepe/app/src/main/res/layout/activity_main.xml" value="0.20018115942028986" />
@@ -13,10 +14,12 @@
         <entry key="..\:/0-pojects/Android/YourReciepe/app/src/main/res/layout/dialog_choosing_image.xml" value="0.25416666666666665" />
         <entry key="..\:/0-pojects/Android/YourReciepe/app/src/main/res/layout/dialog_custom_list_addactivity.xml" value="0.25416666666666665" />
         <entry key="..\:/0-pojects/Android/YourReciepe/app/src/main/res/layout/fragment_all_dishes.xml" value="0.25416666666666665" />
+        <entry key="..\:/0-pojects/Android/YourReciepe/app/src/main/res/layout/fragment_dish_details.xml" value="0.20018115942028986" />
         <entry key="..\:/0-pojects/Android/YourReciepe/app/src/main/res/layout/fragment_home.xml" value="0.20018115942028986" />
         <entry key="..\:/0-pojects/Android/YourReciepe/app/src/main/res/layout/fragment_notifications.xml" value="0.25416666666666665" />
         <entry key="..\:/0-pojects/Android/YourReciepe/app/src/main/res/layout/item_custom_list_addactivity.xml" value="0.20018115942028986" />
         <entry key="..\:/0-pojects/Android/YourReciepe/app/src/main/res/layout/item_dishes_layout.xml" value="0.20018115942028986" />
+        <entry key="..\:/0-pojects/Android/YourReciepe/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/0-pojects/Android/YourReciepe/app/src/main/res/menu/menu_add_for_all_dishes.xml" value="0.25416666666666665" />
       </map>
     </option>

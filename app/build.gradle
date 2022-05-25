@@ -2,6 +2,8 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -51,6 +53,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.2'
     implementation 'androidx.exifinterface:exifinterface:1.3.3'
+    implementation 'androidx.navigation:navigation-dynamic-features-fragment:2.5.0-rc01'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
@@ -77,6 +80,7 @@ dependencies {
 
 
 
+
     // SDP - A scalable size unit library
     // https://github.com/intuit/sdp
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
@@ -87,9 +91,6 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
 
-    // Navigation
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.2'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.4.2'
 
 
 }

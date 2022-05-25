@@ -3,23 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_all_dishes">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_all_dishes"
         android:name="ir.saharapps.yourreciepe.view.fragment.AllDishesFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_all_dishes" />
+        android:label="@string/title_all_dishes"
+        tools:layout="@layout/fragment_all_dishes" >
+        <action
+            android:id="@+id/action_navigation_all_dishes_to_dishDetailsFragment"
+            app:destination="@id/dishDetailsFragment" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="ir.saharapps.yourreciepe.view.fragment.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_favorite_dishes"
+        android:name="ir.saharapps.yourreciepe.view.fragment.FavoriteDishFragment"
+        android:label="@string/title_favorite_dishes"
+        tools:layout="@layout/fragment_favorite_dish" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="ir.saharapps.yourreciepe.view.fragment.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_random_dishes"
+        android:name="ir.saharapps.yourreciepe.view.fragment.RandomDishFragment"
+        android:label="@string/title_random_dishes"
+        tools:layout="@layout/fragment_randosm_dish" />
+    <fragment
+        android:id="@+id/dishDetailsFragment"
+        android:name="ir.saharapps.yourreciepe.view.fragment.DishDetailsFragment"
+        android:label="fragment_dish_details"
+        tools:layout="@layout/fragment_dish_details">
+        <argument
+            android:name="dishDetails"
+            app:argType="ir.saharapps.yourreciepe.model.entities.FavDish"
+            />
+    </fragment>
 </navigation>
