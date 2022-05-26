@@ -18,6 +18,7 @@
     <string name="gallery">Gallery</string>
     <string name="camera">Camera</string>
     <string name="noDishesAdded">No dishes added yet</string>
+    <string name="noFaveDishAdded">No Favorite dish yet</string>
     <string name="dishesImage">dishes image</string>
     <string name="dish_details">Dish Details</string>
     <string name="lbl_estimate_cooking_time">The approx time required to cook the dish is %1$s minutes.</string>

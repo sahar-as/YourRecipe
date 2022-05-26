@@ -8,6 +8,7 @@ import com.bumptech.glide.Glide
 import ir.saharapps.yourreciepe.databinding.ItemDishesLayoutBinding
 import ir.saharapps.yourreciepe.model.entities.FavDish
 import ir.saharapps.yourreciepe.view.fragment.AllDishesFragment
+import ir.saharapps.yourreciepe.view.fragment.FavoriteDishFragment
 
 class FavDishAdapter(private val fragment: Fragment): RecyclerView.Adapter<FavDishAdapter.ItemViewHolder>(){
 
@@ -33,6 +34,9 @@ class FavDishAdapter(private val fragment: Fragment): RecyclerView.Adapter<FavDi
 
         holder.itemView.setOnClickListener {
             if(fragment is AllDishesFragment){
+                fragment.dishDetails(dish)
+            }
+            if(fragment is FavoriteDishFragment){
                 fragment.dishDetails(dish)
             }
         }

@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.toBitmap
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import androidx.palette.graphics.Palette
 import com.bumptech.glide.Glide
@@ -15,14 +17,21 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
+import ir.saharapps.yourreciepe.Application.FavDishApplication
 import ir.saharapps.yourreciepe.R
 import ir.saharapps.yourreciepe.databinding.FragmentDishDetailsBinding
+import ir.saharapps.yourreciepe.viewmodel.FavDishViewModel
+import ir.saharapps.yourreciepe.viewmodel.FavDishViewModelFactory
 import java.io.IOException
 import java.util.*
 
 class DishDetailsFragment : Fragment() {
 
     private var mBinding: FragmentDishDetailsBinding? = null
+
+    private val mFavDishViewModel: FavDishViewModel by viewModels {
+        FavDishViewModelFactory((requireActivity().application as FavDishApplication).repository)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -79,6 +88,27 @@ class DishDetailsFragment : Fragment() {
             mBinding!!.txtFavDetailsCookingDirection.text = it.dishDetails.directionToCook
             mBinding!!.txtFavDetailsCookingTime.text =
                 resources.getString(R.string.lbl_estimate_cooking_time, it.dishDetails.cookingTime)
+
+            if(args.dishDetails.favoriteDish){
+                mBinding!!.imgFavoriteDish.setImageDrawable(ContextCompat.getDrawable
+                    (requireActivity(),R.drawable.ic_favorite_selected))
+            }else{
+                mBinding!!.imgFavoriteDish.setImageDrawable(ContextCompat.getDrawable(
+                    requireActivity(),R.drawable.ic_favorite_unselected))
+            }
+        }
+
+        mBinding!!.imgFavoriteDish.setOnClickListener{
+            args.dishDetails.favoriteDish = !args.dishDetails.favoriteDish
+            mFavDishViewModel.updateFavDishDetail(args.dishDetails)
+
+            if(args.dishDetails.favoriteDish){
+                mBinding!!.imgFavoriteDish.setImageDrawable(ContextCompat.getDrawable
+                    (requireActivity(),R.drawable.ic_favorite_selected))
+            }else{
+                mBinding!!.imgFavoriteDish.setImageDrawable(ContextCompat.getDrawable(
+                    requireActivity(),R.drawable.ic_favorite_unselected))
+            }
         }
     }
 }

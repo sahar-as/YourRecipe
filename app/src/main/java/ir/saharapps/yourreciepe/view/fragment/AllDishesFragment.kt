@@ -23,7 +23,7 @@ import ir.saharapps.yourreciepe.viewmodel.FavDishViewModelFactory
 import ir.saharapps.yourreciepe.viewmodel.HomeViewModel
 
 class AllDishesFragment : Fragment() {
-    private lateinit var mBinding: FragmentAllDishesBinding
+    private var mBinding: FragmentAllDishesBinding? = null
 
     private val mFavDishViewModel: FavDishViewModel by viewModels {
         FavDishViewModelFactory((requireActivity().application as FavDishApplication).repository )
@@ -46,31 +46,31 @@ class AllDishesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         mBinding = FragmentAllDishesBinding.inflate(inflater,container,false)
-        return mBinding.root
+        return mBinding!!.root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        mBinding = null
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mBinding.rvFragmentAllDishesList.layoutManager = GridLayoutManager(requireActivity(),2)
+        mBinding!!.rvFragmentAllDishesList.layoutManager = GridLayoutManager(requireActivity(),2)
         val adapter = FavDishAdapter(this@AllDishesFragment)
-        mBinding.rvFragmentAllDishesList.adapter = adapter
+        mBinding!!.rvFragmentAllDishesList.adapter = adapter
 
         mFavDishViewModel.allDishesList.observe(viewLifecycleOwner){
             dishes ->
             dishes.let {
                 if(it.isNotEmpty()){
-                    mBinding.rvFragmentAllDishesList.visibility = View.VISIBLE
-                    mBinding.txtFragmentAllDishesNoDishes.visibility = View.GONE
+                    mBinding!!.rvFragmentAllDishesList.visibility = View.VISIBLE
+                    mBinding!!.txtFragmentAllDishesNoDishes.visibility = View.GONE
 
                     adapter.dishesList(it)
                 }else{
-                    mBinding.rvFragmentAllDishesList.visibility = View.GONE
-                    mBinding.txtFragmentAllDishesNoDishes.visibility = View.VISIBLE
+                    mBinding!!.rvFragmentAllDishesList.visibility = View.GONE
+                    mBinding!!.txtFragmentAllDishesNoDishes.visibility = View.VISIBLE
                 }
             }
         }
