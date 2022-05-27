@@ -1,9 +1,6 @@
 package ir.saharapps.yourreciepe.model.database
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 import ir.saharapps.yourreciepe.model.entities.FavDish
 import kotlinx.coroutines.flow.Flow
 
@@ -20,4 +17,10 @@ interface FavDishDao {
 
     @Query("SELECT * FROM fav_dish_table WHERE favorite_dish = 1")
     fun getFavoriteDishes(): Flow<List<FavDish>>
+
+    @Delete
+    suspend fun deleteSelectedDish(favDish: FavDish)
+
+    @Query("SELECT * FROM fav_dish_table WHERE type = :filterType")
+    fun getFilterDishes(filterType: String): Flow<List<FavDish>>
 }

@@ -3,12 +3,14 @@ package ir.saharapps.yourreciepe.view.adapter
 import android.app.Activity
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import ir.saharapps.yourreciepe.databinding.ItemCustomListAddactivityBinding
 import ir.saharapps.yourreciepe.view.activity.AddUpdateDishActivity
+import ir.saharapps.yourreciepe.view.fragment.AllDishesFragment
 import java.util.zip.Inflater
 
-class CustomListAdapter(private val activity: Activity,
+class CustomListAdapter(private val activity: Activity, private val fragment: Fragment?,
                         private val list: ArrayList<String>, private val selection: String)
     : RecyclerView.Adapter<CustomListAdapter.ItemViewHolder>(){
 
@@ -29,6 +31,9 @@ class CustomListAdapter(private val activity: Activity,
         holder.itemView.setOnClickListener {
             if(activity is AddUpdateDishActivity){
                 activity.selectedListItem(item, selection)
+            }
+            if(fragment is AllDishesFragment){
+                fragment.filterSelection(item)
             }
         }
     }

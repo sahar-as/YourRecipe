@@ -25,4 +25,14 @@
     <string name="lbl_ingredients">Ingredients</string>
     <string name="lbl_direction_to_cook">Direction To Cook</string>
     <string name="image_contentDescription">image</string>
+    <string name="menu_more">Menu More</string>
+    <string name="delete_dish">Delete Dish</string>
+    <string name="edit_dish">Edit Dish</string>
+    <string name="lbl_update_dish">Update Dish</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="filter">Filter</string>
+    <string name="select_item_to_filter">Select item to filter</string>
+    <string name="no_dish_exist">There is no dish with this type</string>
+
 </resources>
