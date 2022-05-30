@@ -1,5 +1,6 @@
 package ir.saharapps.yourreciepe.view.fragment
 
+import android.app.Dialog
 import android.os.Build
 import android.os.Bundle
 import android.text.Html
@@ -27,6 +28,7 @@ class RandomDishFragment : Fragment() {
     private var mBinding: FragmentRandosmDishBinding? = null
 
     private lateinit var mRandomDishViewModel: RandomDishViewModel
+    private var mProgressDialog: Dialog? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -69,6 +71,11 @@ class RandomDishFragment : Fragment() {
         mRandomDishViewModel.loadRandomDish.observe(viewLifecycleOwner) { loadRandomDish ->
             loadRandomDish?.let {
                 Log.d("TAG", "randomDishViewModelObserver: 3333333333333333 $loadRandomDish")
+                if(loadRandomDish && !mBinding!!.srlRandomDishSwipeRefresh.isRefreshing){
+                    showProgressDialog()
+                }else{
+                    hideProgressBar()
+                }
             }
         }
     }
@@ -138,5 +145,19 @@ class RandomDishFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         mBinding = null
+    }
+
+    private fun showProgressDialog(){
+        mProgressDialog = Dialog(requireActivity())
+        mProgressDialog?.let{
+            it.setContentView(R.layout.dialog_custom_progressbar)
+            it.show()
+        }
+    }
+
+    private fun hideProgressBar(){
+        mProgressDialog?.let {
+            it.dismiss()
+        }
     }
 }

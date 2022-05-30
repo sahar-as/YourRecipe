@@ -35,5 +35,6 @@
     <string name="select_item_to_filter">Select item to filter</string>
     <string name="no_dish_exist">There is no dish with this type</string>
     <string name="added_to_favorite">You have already added the dish to your favorite</string>
+    <string name="please_wait">Please Wait!!</string>
 
 </resources>
