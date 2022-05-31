@@ -65,7 +65,7 @@ It makes use of the following libraries: <br />
 - Random Fragment and Swipe Layout: <br />
 ![yr12](https://user-images.githubusercontent.com/63088252/171139687-501d5751-f716-44ab-b348-fb8a57c7823f.png)
 <br />
-- Worker Manager & Notification: <br />
+- Worker Manager & Notification: <br /> 
 ![yr16](https://user-images.githubusercontent.com/63088252/171139879-7d821591-e614-40b2-a90a-7827cc27364f.png)
 ![yr17](https://user-images.githubusercontent.com/63088252/171139896-22c184c2-69d8-49a3-a62c-00a055b9cf17.png)
 
