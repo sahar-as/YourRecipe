@@ -39,33 +39,33 @@ It makes use of the following libraries: <br />
     
 ### 📺 App Screenshot
 <br />
-- Splash Screen and Main Activity:
+- Splash Screen and Main Activity: <br />
 ![yr1](https://user-images.githubusercontent.com/63088252/171132404-ad2be3b4-f47c-422b-8683-b4d6f2982870.png)
 ![yr2](https://user-images.githubusercontent.com/63088252/171132452-57b6fcd3-c38c-4401-834b-d66775b22f45.png)
 <br />
-- Add Dish:
+- Add Dish: <br />
 ![yr3](https://user-images.githubusercontent.com/63088252/171132488-73ebcc49-867c-4c44-9cd1-83b9e527569a.png)
 ![yr4](https://user-images.githubusercontent.com/63088252/171138686-a1debd56-de7c-4fbc-96e4-d05e071eb6ec.png)
 <br />
-- Filter Dish:
+- Filter Dish: <br />
 ![yr5](https://user-images.githubusercontent.com/63088252/171138853-07fd31b7-5deb-45ec-9f4f-059938d76e11.png)
 ![yr13](https://user-images.githubusercontent.com/63088252/171138886-26599966-3601-4da3-ad87-56d0a5060991.png)
 <br />
-- Detail Fragment and Share Information:
+- Detail Fragment and Share Information: <br />
 ![yr10](https://user-images.githubusercontent.com/63088252/171138992-03c4923b-6f3c-4777-aed2-65b9891d16ab.png)
 ![yr8](https://user-images.githubusercontent.com/63088252/171139089-23bfefa8-9f3f-4cc5-8fff-bf1f338b33bd.png)
 <br />
-- Edit & Delete:
+- Edit & Delete: <br />
 ![yr11](https://user-images.githubusercontent.com/63088252/171139257-48f5b756-98a2-4c62-b2bb-c9d1bf1ce1a0.png)
 ![yr14](https://user-images.githubusercontent.com/63088252/171139278-fafb042f-4800-477f-98e4-070257d49225.png)
 <br />
-- Favorite Detail:
+- Favorite Detail: <br />
 ![yr6](https://user-images.githubusercontent.com/63088252/171139467-cb9c1a86-a3f6-444f-b719-948aa5e9cce5.png)
 <br />
-- Random Fragment and Swipe Layout:
+- Random Fragment and Swipe Layout: <br />
 ![yr12](https://user-images.githubusercontent.com/63088252/171139687-501d5751-f716-44ab-b348-fb8a57c7823f.png)
 <br />
-- Worker Manager & Notification:
+- Worker Manager & Notification: <br />
 ![yr16](https://user-images.githubusercontent.com/63088252/171139879-7d821591-e614-40b2-a90a-7827cc27364f.png)
 ![yr17](https://user-images.githubusercontent.com/63088252/171139896-22c184c2-69d8-49a3-a62c-00a055b9cf17.png)
 
