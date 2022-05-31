@@ -29,4 +29,6 @@ class FavDishRepository(private val favDishDao: FavDishDao) {
         favDishDao.getFilterDishes(filterItem)
 
 
+    fun getRepeatedItem(itemTitle: String): Flow<List<FavDish>> =
+        favDishDao.getRepeatedDish(itemTitle)
 }

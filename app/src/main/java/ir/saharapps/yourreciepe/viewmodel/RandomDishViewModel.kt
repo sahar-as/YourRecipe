@@ -1,17 +1,20 @@
 package ir.saharapps.yourreciepe.viewmodel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.observers.DisposableSingleObserver
 import io.reactivex.rxjava3.schedulers.Schedulers
+import ir.saharapps.yourreciepe.model.entities.FavDish
 import ir.saharapps.yourreciepe.model.network.RandomDishApiService
 import ir.saharapps.yourreciepe.utils.RandomDish
 
 class RandomDishViewModel: ViewModel(){
     private val randomDishApiServiceApiService = RandomDishApiService()
     private val compositeDisposable =  CompositeDisposable()
+
 
     val loadRandomDish = MutableLiveData<Boolean>()
     val randomDishResponse = MutableLiveData<RandomDish.Recipes>()

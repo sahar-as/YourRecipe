@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.*
 import android.widget.GridLayout
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
@@ -154,6 +155,7 @@ class AllDishesFragment : Fragment() {
 
     fun filterSelection(filterItemSelection: String){
         mCustomDialog.dismiss()
+        (activity as AppCompatActivity).supportActionBar?.title = filterItemSelection
 
         if(filterItemSelection == Constants.ALL_TIMES){
             mFavDishViewModel.allDishesList.observe(viewLifecycleOwner){

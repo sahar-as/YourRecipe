@@ -25,7 +25,11 @@ class FavDishViewModel(private val repository: FavDishRepository): ViewModel() {
         repository.deleteSelectedDish(dish)
     }
 
-    fun filterData(filterItem: String) : LiveData<List<FavDish>> = repository.filterDishes(filterItem).asLiveData()
+    fun filterData(filterItem: String) : LiveData<List<FavDish>>
+        = repository.filterDishes(filterItem).asLiveData()
+
+    fun reportRepeatedDish(itemTitle: String) : LiveData<List<FavDish>>
+        = repository.getRepeatedItem(itemTitle).asLiveData()
 }
 
 class FavDishViewModelFactory(private val repository: FavDishRepository): ViewModelProvider.Factory{

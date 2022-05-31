@@ -28,7 +28,13 @@ class RandomDishFragment : Fragment() {
     private var mBinding: FragmentRandosmDishBinding? = null
 
     private lateinit var mRandomDishViewModel: RandomDishViewModel
+
     private var mProgressDialog: Dialog? = null
+
+
+    private val mFavDishViewModel: FavDishViewModel by viewModels {
+        FavDishViewModelFactory((requireActivity().application as FavDishApplication).repository )
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -120,24 +126,38 @@ class RandomDishFragment : Fragment() {
         var addedToFavorites = false
 
         mBinding!!.imgRandomFragmentFavoriteDish.setOnClickListener{
+            var isRepeated = true
             if(addedToFavorites){
                 Toast.makeText(requireActivity(), getString(R.string.added_to_favorite),
                     Toast.LENGTH_LONG).show()
             }else{
-                val randomDishDetails = FavDish(
-                    recipe.image, Constants.DISH_IMAGE_SOURCE_ONLINE, recipe.title,
-                    dishType, "Other", ingridients, recipe.readyInMinutes.toString(),
-                    recipe.instructions, true
-                )
+                mFavDishViewModel.reportRepeatedDish(recipe.title).observe(viewLifecycleOwner){
+                    dish->
+                    dish.let {
+                        if(it.isEmpty()){
+                            isRepeated = false
+                            val randomDishDetails = FavDish(
+                                recipe.image, Constants.DISH_IMAGE_SOURCE_ONLINE, recipe.title,
+                                dishType, "Other", ingridients, recipe.readyInMinutes.toString(),
+                                recipe.instructions, true
+                            )
 
-                val mFavDishViewModel: FavDishViewModel by viewModels {
-                    FavDishViewModelFactory((requireActivity().application as FavDishApplication).repository)
+                            val mFavDishViewModel: FavDishViewModel by viewModels {
+                                FavDishViewModelFactory((requireActivity().application as FavDishApplication).repository)
+                            }
+                            mFavDishViewModel.insert(randomDishDetails)
+                            addedToFavorites = true
+                            mBinding!!.imgRandomFragmentFavoriteDish.setImageDrawable(
+                                ContextCompat.getDrawable
+                                    (requireActivity(),R.drawable.ic_favorite_selected))
+
+                        }
+                    }
+                    if(isRepeated){
+                        Toast.makeText(requireActivity(), "ll",
+                            Toast.LENGTH_LONG).show()
+                    }
                 }
-                mFavDishViewModel.insert(randomDishDetails)
-                addedToFavorites = true
-                mBinding!!.imgRandomFragmentFavoriteDish.setImageDrawable(
-                    ContextCompat.getDrawable
-                        (requireActivity(),R.drawable.ic_favorite_selected))
             }
         }
     }

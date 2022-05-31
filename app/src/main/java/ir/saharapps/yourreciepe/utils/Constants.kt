@@ -13,7 +13,7 @@ object Constants {
 
     const val API_ENDPOINT:String = "recipes/random"
     const val BASE_URL = "https://api.spoonacular.com/"
-    const val API_KEY_VALUE: String = "1944850112dc4e8a80e8fa77371bfafb"
+    const val API_KEY_VALUE: String = "3192c87e13e94b1cb623a04f1d5a0903"
     // KEY PARAMS
     const val API_KEY: String = "apiKey"
     const val LIMIT_LICENSE: String = "limitLicense"
