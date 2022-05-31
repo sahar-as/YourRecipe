@@ -30,7 +30,7 @@ It makes use of the following libraries: <br />
   <li>At the bottom of the application you can see a <b>Bottom menu</b> that directs you to the two pages:
   <ul>
       <li><b>Favorit</b></li>
-      <li><b>Random Dish:</b> with the help of retrofit this fragment will get a random dish from <b>spoonacular.com</b> API, after each loading and after each swipe down because it has been implemented with <b>SwipeRefreshLayout/<b></li>
+      <li><b>Random Dish:</b> with the help of retrofit this fragment will get a random dish from <b>spoonacular.com</b> API, after each loading and after each swipe down because it has been implemented with <b>SwipeRefreshLayout</b></li>
     </ul>
   </li>
   <li>This application has a <b>Worker Manager</b> class and it will show a <b>notification</b> of a new online dish per day with clicking on it you will be redirected to the Random Dish fragment</li>
