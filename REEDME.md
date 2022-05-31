@@ -39,32 +39,32 @@ It makes use of the following libraries: <br />
     
 ### 📺 App Screenshot
 <br />
-- Splash Screen and Main Activity: <br />
+- <b>Splash Screen and Main Activity:</b> <br /><br /> 
 <p align="center"><img src="https://user-images.githubusercontent.com/63088252/171140277-ed0f7236-ca60-4fb4-a4dc-ef407e519a79.png" /> <img src="https://user-images.githubusercontent.com/63088252/171132452-57b6fcd3-c38c-4401-834b-d66775b22f45.png" /></p>
 <br />
-- Add Dish: <br />
-<img src="https://user-images.githubusercontent.com/63088252/171132488-73ebcc49-867c-4c44-9cd1-83b9e527569a.png" />
-<img src="https://user-images.githubusercontent.com/63088252/171138686-a1debd56-de7c-4fbc-96e4-d05e071eb6ec.png" />
+- <b>Add Dish:</b> <br /><br /> 
+<p align="center"><img src="https://user-images.githubusercontent.com/63088252/171132488-73ebcc49-867c-4c44-9cd1-83b9e527569a.png" />
+<img src="https://user-images.githubusercontent.com/63088252/171138686-a1debd56-de7c-4fbc-96e4-d05e071eb6ec.png" /></b>
 <br />
-- Filter Dish: <br />
-<img src="https://user-images.githubusercontent.com/63088252/171138853-07fd31b7-5deb-45ec-9f4f-059938d76e11.png" />
-<img src="https://user-images.githubusercontent.com/63088252/171138886-26599966-3601-4da3-ad87-56d0a5060991.png" />
+- <b>Filter Dish:</b> <br /><br /> 
+<p align="center"><img src="https://user-images.githubusercontent.com/63088252/171138853-07fd31b7-5deb-45ec-9f4f-059938d76e11.png" />
+<img src="https://user-images.githubusercontent.com/63088252/171138886-26599966-3601-4da3-ad87-56d0a5060991.png" /></b
 <br />
-- Detail Fragment and Share Information: <br />
-<img src="https://user-images.githubusercontent.com/63088252/171138992-03c4923b-6f3c-4777-aed2-65b9891d16ab.png" />
-<img src="https://user-images.githubusercontent.com/63088252/171139089-23bfefa8-9f3f-4cc5-8fff-bf1f338b33bd.png" />
+- <b>Detail Fragment and Share Information:</b> <br /><br /> 
+<p align="center"><img src="https://user-images.githubusercontent.com/63088252/171138992-03c4923b-6f3c-4777-aed2-65b9891d16ab.png" />
+<img src="https://user-images.githubusercontent.com/63088252/171139089-23bfefa8-9f3f-4cc5-8fff-bf1f338b33bd.png" /></b>
 <br />
-- Edit & Delete: <br />
-<img src="https://user-images.githubusercontent.com/63088252/171139257-48f5b756-98a2-4c62-b2bb-c9d1bf1ce1a0.png" />
-<img src="https://user-images.githubusercontent.com/63088252/171139278-fafb042f-4800-477f-98e4-070257d49225.png" />
+- <b>Edit & Delete:</b> <br /><br /> 
+<p align="center"><img src="https://user-images.githubusercontent.com/63088252/171139257-48f5b756-98a2-4c62-b2bb-c9d1bf1ce1a0.png" />
+<img src="https://user-images.githubusercontent.com/63088252/171139278-fafb042f-4800-477f-98e4-070257d49225.png" /></b>
 <br />
-- Favorite Detail: <br />
-<img src="https://user-images.githubusercontent.com/63088252/171139467-cb9c1a86-a3f6-444f-b719-948aa5e9cce5.png" />
+- <b>Favorite Detail:</b> <br /><br /> 
+<p align="center"><img src="https://user-images.githubusercontent.com/63088252/171139467-cb9c1a86-a3f6-444f-b719-948aa5e9cce5.png" /></b>
 <br />
-- Random Fragment and Swipe Layout: <br />
-<img src="https://user-images.githubusercontent.com/63088252/171139687-501d5751-f716-44ab-b348-fb8a57c7823f.png" />
+- <b>Random Fragment and Swipe Layout:</b> <br /><br /> 
+<p align="center"><img src="https://user-images.githubusercontent.com/63088252/171139687-501d5751-f716-44ab-b348-fb8a57c7823f.png" /></b>
 <br />
-- Worker Manager & Notification: <br /> 
-<img src="https://user-images.githubusercontent.com/63088252/171139879-7d821591-e614-40b2-a90a-7827cc27364f.png" />
-<img src="https://user-images.githubusercontent.com/63088252/171139896-22c184c2-69d8-49a3-a62c-00a055b9cf17.png" />
+- <b>Worker Manager & Notification:</b> <br /> <br /> 
+<p align="center"><img src="https://user-images.githubusercontent.com/63088252/171139879-7d821591-e614-40b2-a90a-7827cc27364f.png" />
+<img src="https://user-images.githubusercontent.com/63088252/171139896-22c184c2-69d8-49a3-a62c-00a055b9cf17.png" /></b>
 
