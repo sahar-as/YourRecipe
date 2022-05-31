@@ -28,3 +28,15 @@ o	Favorit
 o	Random Dish: with the help of retrofit this fragment will get a random dish from spoonacular.com API, after each loading and after each swipe down because it has been implemented with SwipeRefreshLayout
 •	This application has a Worker Manager class and it will show a notification of a new online dish per day with clicking on it you will be redirected to the Random Dish fragment
 
+
+<ul>
+  <li>Coffee</li>
+  <li>Tea
+    <ul>
+      <li>Black tea</li>
+      <li>Green tea</li>
+    </ul>
+  </li>
+  <li>Milk</li>
+</ul>
+
