@@ -15,28 +15,25 @@ It makes use of the following libraries: <br />
  <br />
 
 ### 📕 Application Features:
-1. It has been implemented with MVVM design pattern.
-2. Firstly, the application will run after showing a splash
-3. On the Main Page, it shows all Dishes both from the internet or imported manually
-4. There are “add” and “Filter” icons in the action bar
-  - You can add a new recipe with your desired picture from the gallery or camera. (it uses Room library to save data)
-  - You can also filter represented images by their type
-•	After selecting each dish from the Main page you will direct to the Detail Page, where you are able to read the whole text of the recipe and also copy or send page dish information
-•	There is a popup menu to Edit and Delete each dishes
-•	At the bottom of the application you can see a Bottom menu that directs you to the two pages:
-o	Favorit
-o	Random Dish: with the help of retrofit this fragment will get a random dish from spoonacular.com API, after each loading and after each swipe down because it has been implemented with SwipeRefreshLayout
-•	This application has a Worker Manager class and it will show a notification of a new online dish per day with clicking on it you will be redirected to the Random Dish fragment
-
 
 <ul>
-  <li>Coffee</li>
-  <li>Tea
+  <li>It has been implemented with MVVM design pattern</li>
+  <li>Firstly, the application will run after showing a splash</li>
+  <li>On the Main Page, it shows all Dishes both from the internet or imported manually</li>
+  <li>There are “add” and “Filter” icons in the action bar
     <ul>
-      <li>Black tea</li>
-      <li>Green tea</li>
+      <li>You can add a new recipe with your desired picture from the gallery or camera. (it uses Room library to save data)</li>
+      <li>You can also filter represented images by their type</li>
     </ul>
   </li>
-  <li>Milk</li>
+  <li>After selecting each dish from the Main page you will direct to the Detail Page, where you are able to read the whole text of the recipe and also copy or send page dish information</li>
+  <li>There is a popup menu to Edit and Delete each dishes</li>
+  <li>At the bottom of the application you can see a Bottom menu that directs you to the two pages:
+  <ul>
+      <li>Favorit</li>
+      <li>Random Dish: with the help of retrofit this fragment will get a random dish from spoonacular.com API, after each loading and after each swipe down because it has been implemented with SwipeRefreshLayout</li>
+    </ul>
+  </li>
+  <li>This application has a Worker Manager class and it will show a notification of a new online dish per day with clicking on it you will be redirected to the Random Dish fragment</li>
 </ul>
 
