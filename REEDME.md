@@ -22,7 +22,7 @@ It makes use of the following libraries: <br />
   <li>There are <b>add</b> and <b>Filter</b> icons in the action bar
     <ul>
       <li>You can <b>Add</b> a new recipe with your desired picture from the <b>gallery</b> or <b>camera</b>. (it uses Room library to save data)</li>
-      <li>You can also <b>Filter/<b> represented images by their type</li>
+      <li>You can also <b>Filter</b> represented images by their type</li>
     </ul>
   </li>
   <li>After selecting each dish from the Main page you will direct to the <b>Detail Page</b>, where you are able to read the whole text of the recipe and also <b>Copy</b> or <b>Share</b> information of dish page</li>
@@ -35,9 +35,10 @@ It makes use of the following libraries: <br />
   </li>
   <li>This application has a <b>Worker Manager</b> class and it will show a <b>notification</b> of a new online dish per day with clicking on it you will be redirected to the Random Dish fragment</li>
 </ul>
-<br/>
+<br />
+    
 ### 📺 App Screenshot
-<br/>
+<br />
 
 ![yr1](https://user-images.githubusercontent.com/63088252/171132404-ad2be3b4-f47c-422b-8683-b4d6f2982870.png)
 ![yr2](https://user-images.githubusercontent.com/63088252/171132452-57b6fcd3-c38c-4401-834b-d66775b22f45.png)
