@@ -3,11 +3,11 @@
 </p>
 
 Your Recipe is an Android application for saving favorite recipes, online and local, using the Kotlin programming language.
-It makes use of the following libraries:
-Glide
-Room
-Retrofit
-RxJava
-Worker Manager
-Navigation
-Androidx
+It makes use of the following libraries: <br />
+- Glide 
+- Room
+- Retrofit
+- RxJava
+- Worker Manager
+- Navigation
+- Androidx
