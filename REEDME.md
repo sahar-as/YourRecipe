@@ -44,27 +44,27 @@ It makes use of the following libraries: <br />
 <br />
 - <b>Add Dish:</b> <br /><br /> 
 <p align="center"><img src="https://user-images.githubusercontent.com/63088252/171132488-73ebcc49-867c-4c44-9cd1-83b9e527569a.png" />
-<img src="https://user-images.githubusercontent.com/63088252/171138686-a1debd56-de7c-4fbc-96e4-d05e071eb6ec.png" /></b>
+<img src="https://user-images.githubusercontent.com/63088252/171138686-a1debd56-de7c-4fbc-96e4-d05e071eb6ec.png" /></p>
 <br />
 - <b>Filter Dish:</b> <br /><br /> 
 <p align="center"><img src="https://user-images.githubusercontent.com/63088252/171138853-07fd31b7-5deb-45ec-9f4f-059938d76e11.png" />
-<img src="https://user-images.githubusercontent.com/63088252/171138886-26599966-3601-4da3-ad87-56d0a5060991.png" /></b
+<img src="https://user-images.githubusercontent.com/63088252/171138886-26599966-3601-4da3-ad87-56d0a5060991.png" /></p>
 <br />
 - <b>Detail Fragment and Share Information:</b> <br /><br /> 
 <p align="center"><img src="https://user-images.githubusercontent.com/63088252/171138992-03c4923b-6f3c-4777-aed2-65b9891d16ab.png" />
-<img src="https://user-images.githubusercontent.com/63088252/171139089-23bfefa8-9f3f-4cc5-8fff-bf1f338b33bd.png" /></b>
+<img src="https://user-images.githubusercontent.com/63088252/171139089-23bfefa8-9f3f-4cc5-8fff-bf1f338b33bd.png" /></p>
 <br />
 - <b>Edit & Delete:</b> <br /><br /> 
 <p align="center"><img src="https://user-images.githubusercontent.com/63088252/171139257-48f5b756-98a2-4c62-b2bb-c9d1bf1ce1a0.png" />
-<img src="https://user-images.githubusercontent.com/63088252/171139278-fafb042f-4800-477f-98e4-070257d49225.png" /></b>
+<img src="https://user-images.githubusercontent.com/63088252/171139278-fafb042f-4800-477f-98e4-070257d49225.png" /></p>
 <br />
 - <b>Favorite Detail:</b> <br /><br /> 
-<p align="center"><img src="https://user-images.githubusercontent.com/63088252/171139467-cb9c1a86-a3f6-444f-b719-948aa5e9cce5.png" /></b>
+<p align="center"><img src="https://user-images.githubusercontent.com/63088252/171139467-cb9c1a86-a3f6-444f-b719-948aa5e9cce5.png" /></p>
 <br />
 - <b>Random Fragment and Swipe Layout:</b> <br /><br /> 
-<p align="center"><img src="https://user-images.githubusercontent.com/63088252/171139687-501d5751-f716-44ab-b348-fb8a57c7823f.png" /></b>
+<p align="center"><img src="https://user-images.githubusercontent.com/63088252/171139687-501d5751-f716-44ab-b348-fb8a57c7823f.png" /></p>
 <br />
 - <b>Worker Manager & Notification:</b> <br /> <br /> 
 <p align="center"><img src="https://user-images.githubusercontent.com/63088252/171139879-7d821591-e614-40b2-a90a-7827cc27364f.png" />
-<img src="https://user-images.githubusercontent.com/63088252/171139896-22c184c2-69d8-49a3-a62c-00a055b9cf17.png" /></b>
+<img src="https://user-images.githubusercontent.com/63088252/171139896-22c184c2-69d8-49a3-a62c-00a055b9cf17.png" /></p>
 
