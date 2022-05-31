@@ -40,7 +40,7 @@ It makes use of the following libraries: <br />
 ### 📺 App Screenshot
 <br />
 - Splash Screen and Main Activity: <br />
-![yr1](https://user-images.githubusercontent.com/63088252/171132404-ad2be3b4-f47c-422b-8683-b4d6f2982870.png)
+![yr1](https://user-images.githubusercontent.com/63088252/171140277-ed0f7236-ca60-4fb4-a4dc-ef407e519a79.png)
 ![yr2](https://user-images.githubusercontent.com/63088252/171132452-57b6fcd3-c38c-4401-834b-d66775b22f45.png)
 <br />
 - Add Dish: <br />
