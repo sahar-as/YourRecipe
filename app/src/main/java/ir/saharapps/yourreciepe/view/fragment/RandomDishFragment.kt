@@ -154,8 +154,8 @@ class RandomDishFragment : Fragment() {
                         }
                     }
                     if(isRepeated){
-                        Toast.makeText(requireActivity(), "ll",
-                            Toast.LENGTH_LONG).show()
+                        Toast.makeText(requireActivity(), getString(R.string.added_dish),
+                            Toast.LENGTH_SHORT).show()
                     }
                 }
             }
