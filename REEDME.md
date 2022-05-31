@@ -15,10 +15,10 @@ It makes use of the following libraries: <br />
  <br />
 
 ### 📕 Application Features:
-- It has been implemented with MVVM design pattern.
--	Firstly, the application will run after showing a splash
--	On the Main Page, it shows all Dishes both from the internet or imported manually
--	There are “add” and “Filter” icons in the action bar
+1. It has been implemented with MVVM design pattern.
+2. Firstly, the application will run after showing a splash
+3. On the Main Page, it shows all Dishes both from the internet or imported manually
+4. There are “add” and “Filter” icons in the action bar
   - You can add a new recipe with your desired picture from the gallery or camera. (it uses Room library to save data)
   - You can also filter represented images by their type
 •	After selecting each dish from the Main page you will direct to the Detail Page, where you are able to read the whole text of the recipe and also copy or send page dish information
