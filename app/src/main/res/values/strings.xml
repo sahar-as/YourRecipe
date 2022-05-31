@@ -37,5 +37,7 @@
     <string name="added_to_favorite">You have already added the dish to your favorite</string>
     <string name="please_wait">Please Wait!!</string>
     <string name="share">Share</string>
+    <string name="notification_title">Checkout new dish recipes</string>
+    <string name="notification_subtitle">Tap for more detail</string>
 
 </resources>

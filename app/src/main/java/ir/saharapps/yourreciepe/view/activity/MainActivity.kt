@@ -10,8 +10,12 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.work.*
 import ir.saharapps.yourreciepe.R
 import ir.saharapps.yourreciepe.databinding.ActivityMainBinding
+import ir.saharapps.yourreciepe.model.notification.notificationWorker
+import ir.saharapps.yourreciepe.utils.Constants
+import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,6 +36,13 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(mNavController, appBarConfiguration)
         binding.navView.setupWithNavController(mNavController)
+
+        if(intent.hasExtra(Constants.NOTIFICATION_ID)){
+            val notificationId = intent.getIntExtra(Constants.NOTIFICATION_ID, 0)
+            binding.navView.selectedItemId = R.id.navigation_random_dishes
+        }
+
+        startWorker()
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -48,5 +59,22 @@ class MainActivity : AppCompatActivity() {
         binding.navView.clearAnimation()
         binding.navView.animate().translationY(0f).duration = 300
         binding.navView.visibility = View.VISIBLE
+    }
+
+    private fun workerConstraint() = Constraints.Builder()
+        .setRequiresCharging(false)
+        .setRequiredNetworkType(NetworkType.NOT_REQUIRED)
+        .setRequiresBatteryNotLow(true)
+        .build()
+
+    private fun createWorkerRequest() =
+        PeriodicWorkRequestBuilder<notificationWorker>(1, TimeUnit.DAYS)
+            .setConstraints(workerConstraint())
+            .build()
+
+    private fun startWorker(){
+        WorkManager.getInstance(this)
+            .enqueueUniquePeriodicWork("Periodic FavDish worker",
+                ExistingPeriodicWorkPolicy.KEEP, createWorkerRequest())
     }
 }
